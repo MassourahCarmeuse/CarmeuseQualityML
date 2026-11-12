@@ -90,7 +90,7 @@ print(
 
 input_file = (
     data_folder
-    / "Kiln_Live_Input.xlsx"
+    / "Kiln_Live_Input.xlsm"
 )
 
 live_data = pd.read_excel(
@@ -739,7 +739,8 @@ print(
 # =========================================================
 
 workbook = load_workbook(
-    input_file
+    input_file,
+    keep_vba=True
 )
 
 sheet = workbook[
